@@ -8,10 +8,3 @@ Route::get('/',function(){
 
 Route::resource('posts',PostController::class);
 
-/*
-Route::get('/', function () {
-    return redirect('/posts');
-});
-
-Route::resource('posts', PostController::class);
-*/
