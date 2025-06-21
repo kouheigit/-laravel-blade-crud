@@ -60,7 +60,12 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->update([
+            'title'=>$request->title,
+            'body'=>$request->body,
+        ]);
+        return redirect()->route('posts.index');
     }
 
     /**
